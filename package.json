@@ -19,6 +19,7 @@
   "license": "ISC",
   "packageManager": "pnpm@10.11.0",
   "devDependencies": {
+    "@neondatabase/serverless": "^1.0.1",
     "@jest/globals": "^30.0.0",
     "@types/bcrypt": "^5.0.2",
     "@types/cors": "^2.8.19",
