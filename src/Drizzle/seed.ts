@@ -1,7 +1,8 @@
 import db from "./db";
 import {
     CustomerTable, LocationTable, CarTable, ReservationTable, BookingsTable,
-    PaymentTable, MaintenanceTable, InsuranceTable
+    PaymentTable, MaintenanceTable, InsuranceTable,
+    UsersTable
 } from "./schema";
 
 async function seed() {
@@ -9,6 +10,9 @@ async function seed() {
     console.log("Seeding to database started...");
 
     // insert locations
+     await db.insert(UsersTable).values([
+        { firstName: "Joemark", lastName: "Gichangi", email: "joegichangi@gmail.com", password: "1234", role: "admin", isVerified:true, verificationCode: "5934" },
+         ]);
     await db.insert(LocationTable).values([
         { locationName: "Nairobi", address: "123 Nairobi", contactNumber: "1234567890" },
         { locationName: "Eldoret", address: "Eldoret", contactNumber: "0987654321" },
